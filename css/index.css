@@ -1,0 +1,113 @@
+html,
+.holster {
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/bg.jpg);
+  background-size: 250px;
+}
+
+body {
+  font: 120%/1.2 "Poiret One", sans-serif;
+  font-weight: normal;
+  padding: 0 0.5em;
+  min-width: 800px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+header,
+footer {
+  font: 150%/1 "Amatic SC", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+}
+
+h1,
+h2 {
+  margin-block-start: 0.1rem;
+  margin-block-end: 0.1rem;
+}
+
+a {
+  color: bisque;
+  text-transform: lowercase;
+}
+
+a:hover {
+  color: darkorange;
+}
+
+header a,
+footer a {
+  font-size: 80%;
+  text-decoration: none;
+  display: inline-block;
+  width: 12%;
+}
+
+header a:hover,
+footer a:hover {
+  font-size: 80%;
+  text-transform: uppercase;
+}
+
+/* убираем полосы прокрyтки*/
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  font-size: 80%;
+}
+
+.intro {
+  color: #fff;
+  display: block;
+  min-height: 500px;
+  max-height: 800px;
+  height: 95%;
+  background-image: url(../assets/69.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  border-radius: 1%;
+}
+
+.text {
+  padding: 1em;
+  text-align: left;
+  width: 30%;
+}
+
+/* всё что ниже - это снап-прокрутка и я не доконца понимаю , как она получилась.. =) */
+img {
+  width: 100%;
+  border-radius: 1%;
+}
+
+.container {
+  display: flex;
+  overflow: auto;
+  flex: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container.block {
+  width: 100%;
+  min-height: 400px;
+  max-height: 800px;
+  flex-flow: column nowrap;
+}
+
+.block.scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.container > div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+}

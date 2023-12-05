@@ -1,86 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Amatic+SC:wght@400;700&family=Lobster&family=Poiret+One&family=Yanone+Kaffeesatz:wght@200;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link type="image/x-icon" href="assets/favicon.ico" rel="shortcut icon" />
-    <link type="Image/x-icon" href="assets/favicon.ico" rel="icon" />
-    <title>Фото-портфолио</title>
-  </head>
+    <link rel="icon" href="assets/icons/favicon.ico" type="Image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/media.css" type="text/css" />
+    <script defer src="script/utils.js"></script>
+    <script defer src="script/matrix.js"></script>
+    <script defer src="script/answers.js"></script>
+    <script defer src="script/botLogic.js"></script>
+    <script defer src="script/index.js"></script>
+    <title>AlmostChatGPT</title>
+</head>
 
-  <body>
-    <header>
-      <h1 id="top">Привет</h1>
-      <a href="#bot">в копирайты </a>
-      <a href="#" onclick="location.reload(); return false;">
-        Обновить страницу
-      </a>
-    </header>
+<body>
+    <canvas id="matrix"> </canvas>
+    <div class="container">
+        <header>
+            <h1>ChatGPT-0.001</h1>
+        </header>
 
-    <main>
-      <div class="holster">
-        <div class="container block scroll-snapping">
-          <div class="intro">
-            <div class="text">
-              Задача была рассказать о себе, об увлечениях своих и интересах
-              иии... это оказалось для меня неподьёмно сложно! Форма задания
-              свободная, настолько, что я схватил
-              <a
-                target="_blank"
-                href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%B0%D0%BB%D0%B8%D1%87"
-              >
-                Analysis paralysis</a
-              >
-              и на полдня залип в бездействии и бессмысленном маянии. Ведь мне
-              столько всего интересно и как же можно рассказать обо всём, не
-              превратив страницу в энциклопедию? К вечеру решил ограничиться
-              фотками из путешествий и начался новый паралич - какие же фотки
-              выбрать?
-              <br />
-              <br />
-              И только когда дедлайны уже дышут в затылок - паралич отпускает и
-              что-то да делается... И это результат. Тут можно по фотке листать
-              колёсиком и за один тик будет пролистываться целая фотка.
+        <main>
+            <input type="radio" name="slide" id="about-slide" class="about select" checked />
+            <div class="about title"><span>About ChatBot</span></div>
+            <div id="about-content" class="about content">
+                <div class="abouttext">
+                    Привет! Мой чатбот - инновационный инструмент коммуникации, который поможет вам
+                    получить ответы на вопросы быстро и эффективно. Он основан на технологии машинного обучения, что
+                    позволяет ему адаптироваться к ваши запросам и предлагать релевантные ответы. Независимо от того,
+                    нужна ли вам помощь с выбором товара, решением проблемы или просто общение, мой чатбот всегда готов
+                    помочь. Он умеет анализировать текст запроса и предоставлять конкретные ответы, чтобы сделать ваше
+                    взаимодействие с сайтом более продуктивным.
+                </div>
+                <div class="copirigth">
+                    music created by <sup>©</sup> Ben Prunty <br>
+                    description and bot answers created by <sup>©</sup> ChatGPT-3
+                </div>
             </div>
-            <!-- <div class="scroll">
-                        листай
-                    </div> -->
-          </div>
-          <div><img src="assets/1.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/2.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/3.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/4.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/5.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/6.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/7.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/8.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/9.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/10.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/11.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/12.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/13.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/14.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/15.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/16.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/17.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/18.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/19.jpg" alt="фотка с путешествия" /></div>
-          <div><img src="assets/20.jpg" alt="фотка с путешествия" /></div>
-        </div>
-      </div>
-    </main>
 
-    <footer id="bot">
-      <h2>© фотки мои, но если очень хочется - бери</h2>
-      <a href="#top">наверх</a>
-    </footer>
-  </body>
-</html>
+            <input type="radio" name="slide" id="chatbot-slide" class="chatbot select" />
+            <div class="chatbot title"><span>Ask you questions</span></div>
+            <div id="chatbot" class="chatbot content">
+                <div id="chatfield" class="chatbot answer"></div>
+                <input id="input" name="input" type="text" placeholder="спроси меня что-нибудь" />
+            </div>
+
+        </main>
+    </div>
+</body>

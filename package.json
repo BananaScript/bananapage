@@ -1,25 +1,18 @@
 {
-  "name": "core-css-layout-site",
-  "version": "1.0.0",
-  "description": "Продолжим создавать оригинальные веб-страницы. Теперь тебе предстоит создать собственный сайт!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Elbrus-Bootcamp/core-css-layout-site.git"
+  "name": "phase0-additionaltask-bot",
+  "description": "Создай несложный бот, используя все инструменты, которые вы изучили за фазу 0.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Elbrus-Bootcamp/core-css-layout-site/issues"
-  },
-  "homepage": "https://github.com/Elbrus-Bootcamp/core-css-layout-site#readme",
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "pretty-quick": "^3.1.3"
-  }
+  "license": "ISC"
 }

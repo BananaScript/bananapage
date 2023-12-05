@@ -1,113 +1,122 @@
-html,
-.holster {
-  height: 100%;
-  width: 100%;
-  background-image: url(../assets/bg.jpg);
-  background-size: 250px;
+:root {
+    --text-main: #c9c9c9;
+    --title-color: #2da85c;
+    --user-msg: rgba(38, 189, 76, 0.8);
+    --bot-msg:  rgba(255, 255, 255, 0.8);
+    --msg-text: #0d2409;
+    --container-bg: rgba(0, 120, 50, 0.4);
+    --input-field: rgba(200, 255, 200, 0.85);
+    --bg-black: #000;
 }
 
 body {
-  font: 120%/1.2 "Poiret One", sans-serif;
-  font-weight: normal;
-  padding: 0 0.5em;
-  min-width: 800px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5%;
-}
-
-header,
-footer {
-  font: 150%/1 "Amatic SC", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  padding: 0.5em;
-}
-
-h1,
-h2 {
-  margin-block-start: 0.1rem;
-  margin-block-end: 0.1rem;
-}
-
-a {
-  color: bisque;
-  text-transform: lowercase;
-}
-
-a:hover {
-  color: darkorange;
-}
-
-header a,
-footer a {
-  font-size: 80%;
-  text-decoration: none;
-  display: inline-block;
-  width: 12%;
-}
-
-header a:hover,
-footer a:hover {
-  font-size: 80%;
-  text-transform: uppercase;
-}
-
-/* убираем полосы прокрyтки*/
-.container::-webkit-scrollbar {
-  display: none;
-}
-
-h2 {
-  font-size: 80%;
-}
-
-.intro {
-  color: #fff;
-  display: block;
-  min-height: 500px;
-  max-height: 800px;
-  height: 95%;
-  background-image: url(../assets/69.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom;
-  border-radius: 1%;
-}
-
-.text {
-  padding: 1em;
-  text-align: left;
-  width: 30%;
-}
-
-/* всё что ниже - это снап-прокрутка и я не доконца понимаю , как она получилась.. =) */
-img {
-  width: 100%;
-  border-radius: 1%;
+    background-color: var(--bg-black);
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-  display: flex;
-  overflow: auto;
-  flex: none;
-  background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--container-bg);
+    border-radius: 20px;
+    caret-color: transparent;
+    padding: 0 1rem 1rem;
+    position: relative;
+    margin: 2% 10%;
+    max-width: 900px;
+    z-index: 1;
 }
 
-.container.block {
-  width: 100%;
-  min-height: 400px;
-  max-height: 800px;
-  flex-flow: column nowrap;
+#matrix {
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
-.block.scroll-snapping {
-  scroll-snap-type: y mandatory;
+main {
+    font-family: monospace;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--text-main);
+    border: 0;
+    border-radius: 10px;
+    flex-direction: column;
 }
 
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+header {
+    display: flex;
+}
+
+header h1 {
+    margin: 0 auto;
+    line-height: 60px;
+    color: var(--text-main);
+    font-family: monospace;
+}
+
+#input {
+    border-radius: 8px;
+    border: transparent;
+    line-height: 35px;
+    background-color: var(--input-field);
+    padding: 0 15px;
+}
+
+#input:focus {
+    outline: none;
+    caret-color: var(--bg-black);
+}
+
+.about.content {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    /* -webkit-text-stroke: 0.1px rgb(255, 255, 255); */
+}
+
+.abouttext {
+    width: 80%;
+    flex-grow: 1;
+}
+
+.copirigth {
+    text-align: right;
+}
+
+.chatbot {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.chatbot::-webkit-scrollbar {
+    width: 0;
+}
+
+#chatfield {
+    scroll-behavior: smooth;
+    flex-grow: 2;
+}
+
+.msg {
+    width: 40%;
+    color: var(--msg-text);
+    border-radius: 10px;
+    border: 0;
+    line-height: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+}
+
+.user {
+    background-color: var(--user-msg);
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: var(--bot-msg);
 }

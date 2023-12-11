@@ -1,0 +1,155 @@
+@font-face {
+    font-family: header;
+    src: url("../assets/font/TROGN___.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: mono;
+    src: url("../assets/font/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+
+:root {
+    --shadow-yellow: #d3c93c;
+    --shadow-pink: #ae3c80;
+    --time-animation: 120s;
+}
+
+body {
+    caret-color: transparent;
+    font-family: mono, monospace;
+    user-select: none;
+    background-color: rgb(3, 5, 34);
+}
+
+canvas {
+    position: fixed;
+    opacity: 0;
+    animation: stars var(--time-animation) infinite;
+}
+
+@keyframes stars {
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: .1;
+    }
+}
+
+#container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-family: header, mono, monospace;
+    font-size: 50px;
+    margin: 30px auto;
+    padding: 0;
+    z-index: 1;
+}
+
+#intro {
+    flex-grow: 2;
+    align-self: center;
+    font-family: mono, monospace;
+    letter-spacing: -2.5px;
+    font-size: 30px;
+    text-align: center;
+    width: 800px;
+    z-index: 1;
+}
+
+#mountains img {
+    width: 100%;
+    animation: mountains var(--time-animation) infinite;
+}
+
+@keyframes mountains {
+
+    20%,
+    80% {
+        filter: drop-shadow(0 0 60px var(--shadow-yellow)) blur(1px) grayscale(50%) invert(10%);
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px var(--shadow-pink)) blur(10px) grayscale(90%) invert(30%) brightness(0.1);
+        transform: scale(1.03);
+    }
+}
+
+#canon {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ball 2s;
+}
+
+@keyframes ball {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 3px 30px #c51919;
+    }
+
+    100% {
+        transform: scale(0.5);
+        box-shadow: 0 10px 10px var(--shadow-yellow);
+    }
+}
+
+.climber {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+#sky {
+    position: absolute;
+    float: left;
+    z-index: -1;
+    width: 100vw;
+    height: 500vh;
+    background: linear-gradient(#f5c156, #e66465, #ae3c80, #3c497f, #0b0d2f);
+    animation: sky var(--time-animation) infinite;
+}
+
+@keyframes sky {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#knowledge-wrapper {  
+    position: absolute;
+    top:5%;
+    left: 20%;
+    width: 60%
+}
+
+#knowledge {
+    font-family: mono, monospace;
+    font-size: 30px;
+    text-align: center;
+}

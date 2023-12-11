@@ -1,0 +1,29 @@
+#sound-btn {
+    background-image: url('../assets/icons/sound-play.png');
+    position: absolute;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    top: 5%;
+    left: 110%;
+    border-radius: 50%;
+}
+
+#sound-btn:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0)) invert(80%);
+}
+
+#sound-btn:focus {
+    outline: 0;
+}
+
+#timer {
+    font-family: header;
+    position: absolute;
+    left: -10%;
+    top: 4%;
+    font-size: 50px;
+}
